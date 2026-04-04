@@ -1,0 +1,27 @@
+# COVID-19 IR Search Engine — Dependencies
+# Python 3.10+ required. Java 11+ required for Pyserini (Lucene backend).
+
+# Core retrieval toolkit (BM25, BM25F, RM3 via Lucene)
+pyserini==0.25.0
+
+# Neural reranking (ColBERTv2) — run on Google Colab with GPU
+# colbert-ai is installed separately in the Colab notebook
+
+# Evaluation
+ir_measures==0.3.4
+
+# Preprocessing
+spacy==3.8.14
+
+# Data handling
+pandas==2.2.3
+
+# Utilities
+tqdm==4.67.3
+
+# Search GUI
+streamlit>=1.35.0
+
+# Plotting (used in evaluation and corpus tabs)
+matplotlib>=3.8.0
+plotly>=5.18.0
