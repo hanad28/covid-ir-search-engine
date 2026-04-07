@@ -14,7 +14,7 @@ from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
 
-from config import CORPUS_METADATA, DATA_DIR, CORPUS_DIR
+from config import CORPUS_METADATA, DATA_DIR, CORPUS_DIR, PROJECT_ROOT
 
 JSONL_DIR = DATA_DIR / "corpus_jsonl"
 

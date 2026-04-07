@@ -93,27 +93,20 @@ Opens a browser-based search interface at `http://localhost:8501`.
 
 ## Sample data
 
-A 200-document subset is provided in `sample_data/` for markers to verify the implementation without downloading the full corpus.
+A 200-document subset is provided in `sample_data/` for markers to verify the implementation without downloading the full 3 GB corpus.
 
-To build (or rebuild) the sample:
+To run the full pipeline against the sample, make two small edits:
 
-```bash
-python scripts/build_sample.py
-```
-
-To run the pipeline against the sample, make the following two changes:
-
-**1. Update paths in `src/config.py`:**
+**1. Update topic and qrels paths in `src/config.py`** (lines 22–23):
 
 ```python
-CORPUS_METADATA = PROJECT_ROOT / "sample_data" / "metadata.csv"
 TOPICS_FILE = PROJECT_ROOT / "sample_data" / "topics" / "topics-rnd1.xml"
-QRELS_FILE = PROJECT_ROOT / "sample_data" / "qrels" / "qrels-rnd1.txt"
+QRELS_FILE  = PROJECT_ROOT / "sample_data" / "qrels" / "qrels-rnd1.txt"
 ```
 
-**2. Update the JSONL path in `src/index.py`:**
+**2. Update the JSONL path in `src/index.py`** (line 19):
 
-Change line 19 from:
+Change:
 ```python
 JSONL_DIR = DATA_DIR / "corpus_jsonl"
 ```
@@ -122,12 +115,14 @@ to:
 JSONL_DIR = PROJECT_ROOT / "sample_data"
 ```
 
-Then run the pipeline as normal:
+The JSONL file (`sample_data/docs.jsonl`) is already provided, so the JSONL build step is skipped automatically.
+
+Then run:
 
 ```bash
-python scripts/build_index.py
-python scripts/run_all.py
-python scripts/evaluate.py
+python scripts/build_index.py   # builds Lucene index on 200 docs
+python scripts/run_all.py       # runs all 5 retrieval methods
+python scripts/evaluate.py      # outputs nDCG@10, MAP, R@100, R@1000
 ```
 
 ---
