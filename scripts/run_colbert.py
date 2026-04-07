@@ -24,6 +24,8 @@ try:
     import torch
     from colbert import Searcher
     from colbert.infra import ColBERTConfig, Run, RunConfig
+    from colbert.modeling.checkpoint import Checkpoint
+    from pyserini.search.lucene import LuceneSearcher
 except ImportError:
     print("ColBERTv2 dependencies not found.")
     print("This script is designed to run on Google Colab with GPU.")
@@ -51,12 +53,9 @@ def rerank_with_colbert(
     For each query-document pair, computes the ColBERT late interaction
     score and re-sorts documents by this score.
     """
-    from colbert.modeling.checkpoint import Checkpoint
-
     checkpoint = Checkpoint(model_name, colbert_config=ColBERTConfig())
 
     # Load Lucene searcher for document text
-    from pyserini.search.lucene import LuceneSearcher
     lucene_searcher = LuceneSearcher(str(INDEX_DIR))
 
     results = {}
