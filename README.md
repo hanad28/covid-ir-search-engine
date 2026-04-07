@@ -9,7 +9,7 @@ The system implements a five-run ablation ladder: BM25 baseline, BM25F field-awa
 ## Requirements
 
 - Python 3.10 or later
-- Java 11 or later (required by Pyserini/Lucene — [Amazon Corretto 11](https://aws.amazon.com/corretto/) recommended)
+- Java 11 or later (required by Pyserini/Lucene — [Amazon Corretto 11](https://aws.amazon.com/corretto/) recommended; set `JAVA_HOME` manually if not auto-detected)
 - A Google Colab account with T4 GPU runtime (for Run D only)
 
 ---
