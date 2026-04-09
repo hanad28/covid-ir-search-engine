@@ -61,7 +61,7 @@ RRF_K = 60             # Damping constant
 RETRIEVAL_DEPTH = 1000  # Number of documents retrieved per query
 
 # Evaluation metrics
-EVAL_METRICS = ["nDCG@10", "AP", "R@100", "R@1000"]
+EVAL_METRICS = ["nDCG@10", "MAP", "R@100", "R@1000"]
 
 # Run names (used in TREC runfile output)
 RUN_NAMES = {

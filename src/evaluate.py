@@ -16,7 +16,7 @@ from config import QRELS_FILE, RUNS_DIR, RESULTS_DIR, RUN_NAMES, EVAL_METRICS
 # Map config metric names to ir_measures objects
 METRIC_MAP = {
     "nDCG@10": nDCG @ 10,
-    "AP": AP,
+    "MAP": AP,
     "R@100": R @ 100,
     "R@1000": R @ 1000,
 }
