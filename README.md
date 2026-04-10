@@ -188,3 +188,11 @@ covid-ir-search-engine/
 | C | `bm25f_rm3.txt` | BM25F + RM3 pseudo-relevance feedback |
 | D | `bm25f_rm3_colbert.txt` | Run C candidates reranked by ColBERTv2 |
 | E | `rrf_fusion.txt` | RRF fusion of Run C + Run D (k=60) |
+
+---
+
+## Authors
+
+Hanad Ali · Abdallah Ramadan · Kieran Cooke · Jamaldeen Adesope
+
+ECS736P Information Retrieval — MSc Data Science and AI, Queen Mary University of London
