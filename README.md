@@ -1,6 +1,6 @@
 # COVID-19 Biomedical IR Search Engine
 
-Multi-stage information retrieval pipeline for COVID-19 scientific literature, evaluated on the TREC-COVID Round 1 benchmark over the CORD-19 corpus. Built for ECS736P Information Retrieval, MSc Data Science and AI, QMUL.
+Multi-stage information retrieval pipeline for COVID-19 scientific literature, evaluated on the TREC-COVID Round 1 benchmark over the CORD-19 corpus. 
 
 The system implements a five-run ablation ladder: BM25 baseline, BM25F field-aware retrieval, BM25F+RM3 query expansion, ColBERTv2 neural reranking, and RRF rank fusion. A Streamlit GUI provides a live search interface, corpus inspection, and evaluation results.
 
@@ -193,6 +193,6 @@ covid-ir-search-engine/
 
 ## Authors
 
-Hanad Ali · Abdallah Ramadan · Kieran Cooke · Jamaldeen Adesope
+Hanad Ali | Abdallah Ramadan | Kieran Cooke | Jamaldeen Adesope
 
-ECS736P Information Retrieval — MSc Data Science and AI, Queen Mary University of London
+ECS736P Information Retrieval - MSc Data Science and AI, Queen Mary University of London
