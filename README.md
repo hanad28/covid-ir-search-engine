@@ -189,3 +189,11 @@ covid-ir-search-engine/
 | D | `bm25f_rm3_colbert.txt` | Run C candidates reranked by ColBERTv2 |
 | E | `rrf_fusion.txt` | RRF fusion of Run C + Run D (k=60) |
 
+
+## Team Contributions
+
+This project was developed collaboratively as part of the ECS736P
+Information Retrieval coursework.
+
+- **Hanad** — Primary developer, responsible for the majority of the system implementation and integration.
+- **[Jibola Adesope](https://github.com/Jibola97)** — Contributed the ColBERTv2 neural reranking component.
